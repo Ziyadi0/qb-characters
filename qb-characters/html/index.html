@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://assets.nopixel.net/web/fonts/gilroy/stylesheet.css" />
+    <script src="https://kit.fontawesome.com/eaf5f1648e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./newstyle.css" rel="stylesheet">
+    <title></title>
+</head>
+
+<body>
+    <audio id="click" src="./sounds/click.mp3"></audio>
+    <audio id="hover" src="./sounds/hover.mp3"></audio>
+    <!-- <div class="blurry"></div> -->
+    <div class="intro">
+    </div>
+    <audio src="./sounds/abomalak.mp3" type="audio/mp3" autoplay="true" looped="true"></audio>
+    <div class="container">
+        <div class="main-screen">
+            <div class="bar"></div>
+            <div class="bar2"></div>
+            <div class="box"></div>
+            <div class="characters-text">Character Selector</div>
+            <div class="characters-text2">Select the character you want to play as</div>
+            <div class="player-inv-info">
+                <div class="player-inv-info-main">
+                    <div class="icon"><i class="fa-solid fa-bars-staggered"></i></div>
+                </div>
+            </div>
+            <div class="characters-text1">Your Characters</div>
+            <div class="characters-text21">Manage Yor Character</div>
+            <div class="new-character-panel">
+                <div class="new-character-header">Create new character</div>
+                <div class="information-body">
+                    <div class="info-row">
+                        <div class="fill-information">
+                            <div class="information-label">
+                                First Name:
+                            </div>
+                            <input class="information-input textbox" id="firstname" type="text" oninput="this.value=this.value.replace(/[^A-Za-z ]/g,'')" maxlength="14" onkeypress="return event.charCode !== 32" />
+                        </div>
+                        <div class="fill-information">
+                            <div class="information-label">
+                                Last Name:
+                            </div>
+                            <input class="information-input textbox" id="lastname" type="text" oninput="this.value=this.value.replace(/[^A-Za-z ]/g,'')" maxlength="14" onkeypress="return event.charCode !== 32" />
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="fill-information">
+                            <div class="information-label">
+                                Birthdate:
+                            </div>
+                            <div class="info-row birthdate">
+                                <input type="date" class="information-birthdate" id="birthdate" value="2023-12-31" min="1920-01-01" max="2023-12-31" />
+                            </div>
+                        </div>
+                        <div class="fill-information">
+                            <div class="information-label">
+                                Gender:
+                            </div>
+                            <select class="information-select" id="gender">
+                                    <option value="hide">Gender</option>
+                                    <option value="Male" selected>Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="fill-information">
+                            <div class="information-label">
+                                Nationality:
+                            </div>
+                            <input id="nationality" class="textbox information-input" type="text" oninput="this.value=this.value.replace(/[^A-Za-z ]/g,'')" maxlength="14" onkeypress="return event.charCode !== 32" />
+                        </div>
+                    </div>
+                </div>
+                <div class="create-new-character">
+                    Create
+                </div>
+                <div class="cancel-new-character">
+                    Cancel
+                </div>
+            </div>
+            <div class="select-characters">
+                <div class="character" style="bottom: -250px;">
+                    <div class="character-body">
+                        <div class="character-mugshot">
+                            <img src="./mugshot1.png" />
+                        </div>
+                        <div class="character_info">
+                            <div class="character-name">
+                                John Wick
+                            </div>
+                            <div class="character-job">
+                                Civilian
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chose-character">
+                        Spawn
+                    </div>
+                    <!-- <div class="character-location">
+                            Last Location: Sandy, California
+                        </div> -->
+                </div>
+                <div class="character" style="bottom: -250px;">
+                    <div class="character-body">
+                        <div class="character-mugshot">
+                            <img src="./mugshot1.png" />
+                        </div>
+                        <div class="character_info">
+                            <div class="character-name">
+                                John Wick
+                            </div>
+                            <div class="character-job">
+                                Civilian
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chose-character">
+                        Spawn
+                    </div>
+                </div>
+                <div class="character" style="bottom: -250px;">
+                    <div class="character-body">
+                        <div class="character-mugshot">
+                            <img src="./mugshot1.png" />
+                        </div>
+                        <div class="character_info">
+                            <div class="character-name">
+                                John Wick
+                            </div>
+                            <div class="character-job">
+                                Civilian
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chose-character">
+                        Spawn
+                    </div>
+                </div>
+                <div class="new-character" style="bottom: -250px;">
+                    Create New Character
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="spawn-selection">
+        <img src="jabermap.png" class="map" />
+        <div class="spawn-location" id="LSPD">
+            <img src="SelectedLocation.png" />
+            <span>Los Santos Police Department</span>
+        </div>
+        <div class="spawn-location" id="LSMD">
+            <img src="SelectedLocation.png" />
+            <span>Centeral Los Santos Medic Department</span>
+        </div>
+        <div class="spawn-location" id="SAPD">
+            <img src="SelectedLocation.png" />
+            <span>Sandy Country Police Department</span>
+        </div>
+        <div class="spawn-location" id="SMD">
+            <img src="SelectedLocation.png" />
+            <span>Sandy Medical Center</span>
+        </div>
+        <div class="last-location">
+            Last Location
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./js/profanity.js" defer></script>
+<script type="text/javascript" src="./js/script.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+
+</html>

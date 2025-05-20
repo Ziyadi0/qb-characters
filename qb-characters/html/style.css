@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto&display=swap');
+
+* {
+    /* cursor: url(./qb-pixel.png); */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rajdhani', sans-serif !important;
+    /* cursor: url('blank_cursor.png'), none; */
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
